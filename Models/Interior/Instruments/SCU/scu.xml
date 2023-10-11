@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>scu2.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>text</object-name>
+	<object-name>floatarm_text</object-name>
+    <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>batepu_led</object-name>
+      <condition>
+      <greater-than>
+        <property>controls/electric/external-power</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>directbat</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/directbat-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/battery-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>material</type>
+     <object-name>directbat_led_off</object-name>
+    <object-name>directbat_led2</object-name>
+    <condition>
+     <property>controls/electric/directbat-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 0.90 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>gene</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+         <property>controls/electric/engine/generator</property>
+      </binding>
+	   <binding>
+        <command>property-toggle</command>
+         <property>controls/electric/engine[1]/generator</property>
+      </binding>
+    </action>
+  </animation>
+
+   <animation>
+    <type>material</type>
+     <object-name>gene_led_off</object-name>
+
+    <condition>
+     <property>controls/electric/engine/generator</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>horn</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/horn</property>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+     <object-name>horn_led_off</object-name>
+
+    <condition>
+     <property>controls/electric/horn</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>domelt</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/dome-light</property>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+    <type>material</type>
+     <object-name>domelt_led_off</object-name>
+
+    <condition>
+     <property>controls/lighting/dome-light</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>avionic</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/avionics-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+
+   <animation>
+    <type>material</type>
+     <object-name>avionic_led_off</object-name>
+
+    <condition>
+     <property>controls/electric/avionics-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>generst</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/APU-generator</property>
+      </binding>
+	    <mod-up>
+       <binding>
+         <command>property-assign</command>
+         <property>controls/electric/APU-generator</property>
+         <value>0</value>
+       </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>acollt</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/beacon</property>
+      </binding>
+      <!-- mhab strobe is tied to beacon (for simplicity) -->
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/beacon-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+   <animation>
+    <type>material</type>
+     <object-name>acollt_led_off</object-name>
+
+    <condition>
+     <property>controls/switches/beacon-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>poslt</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/nav-lights-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+
+     <animation>
+    <type>material</type>
+     <object-name>poslt_led_off</object-name>
+
+    <condition>
+     <property>controls/switches/nav-lights-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>fuelp</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+      <property>controls/switches/fuel/transfer-pump[1]</property>
+      </binding>
+    </action>
+  </animation>
+
+
+   <animation>
+    <type>material</type>
+     <object-name>fuelp_led_off</object-name>
+   <object-name>fuelp_led2</object-name>
+    <condition>
+     <property>controls/switches/fuel/transfer-pump[1]</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>instl1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+     <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instrument-lights</property>
+      </binding>
+    </action>
+  </animation>
+
+     <animation>
+    <type>material</type>
+     <object-name>instl1_led_off</object-name>
+
+    <condition>
+     <property>controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>instl2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instruments-lights2</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>material</type>
+     <object-name>instl2_led_off</object-name>
+
+    <condition>
+     <property>controls/lighting/instruments-lights2</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>pitot12</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+
+      <animation>
+    <type>material</type>
+     <object-name>pitot_led_off</object-name>
+
+    <condition>
+     <property>controls/anti-ice/pitot-heat</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>horizon</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/horizon</property>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+    <type>material</type>
+     <object-name>horizon_led_off</object-name>
+
+    <condition>
+     <property>controls/switches/horizon</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>gyro</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/gyrocompass</property>
+      </binding>
+    </action>
+  </animation>
+
+
+
+      <animation>
+    <type>material</type>
+     <object-name>gyro_led_off</object-name>
+
+    <condition>
+     <property>controls/electric/gyrocompass</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+
+   <animation>
+    <type>pick</type>
+    <object-name>crank</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+ 		  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/ignition</property>
+      </binding>
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+	    <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/ignition</property>
+      </binding>
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+    </action>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+      <object-name>firettest</object-name>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/firetest</property>
+        </binding>
+      </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>wlttest</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/warningtest</property>
+      </binding>
+      <mod-up>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/warningtest</property>
+       </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>servotest</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/servotest</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>floatarm</object-name>
+	<object-name>floatarm_text</object-name>
+      <action>
+
+      <button>0</button>
+
+      <repeatable>false</repeatable>
+
+      <binding>
+
+        <command>property-toggle</command>
+
+        <property>controls/gear/floats-armed</property>
+
+      </binding>
+
+      <binding>
+
+        <command>property-toggle</command>
+
+        <property>sim/model/sound/click</property>
+
+        <value>1</value>
+
+      </binding>
+
+    </action>
+  </animation>
+
+   <animation>
+  <type>material</type>
+  <object-name>floatarm_led</object-name>
+  <condition>
+  <and>
+  <equals>
+     <property>controls/gear/floats-armed</property>
+	 <value>1</value>
+   </equals>
+
+	<equals>
+    <property>sim/multiplay/generic/string[2]</property>
+    <value>Floatation_System</value>
+	</equals>
+
+
+</and>
+   </condition>
+    <emission>
+      <red>   0.1 </red>
+      <green> 1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+ </animation>
+
+
+
+    <animation>
+    <type>pick</type>
+    <object-name>taxilt</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/search-lights-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+
+
+     <animation>
+    <type>material</type>
+     <object-name>taxilt_led_off</object-name>
+  <object-name>taxilt_led2</object-name>
+    <condition>
+     <property>controls/switches/search-lights-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>landinglight</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/landing-lights-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+
+     <animation>
+    <type>material</type>
+     <object-name>landinglight_led_off</object-name>
+   <object-name>landinglight_led2</object-name>
+    <condition>
+     <property>controls/switches/landing-lights-switch</property>
+    </condition>
+    <emission>
+      <red>   0.40 </red>
+      <green> 1 </green>
+      <blue>  0.40 </blue>
+    </emission>
+  </animation>
+
+
+
+</PropertyList>

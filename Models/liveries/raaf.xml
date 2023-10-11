@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">RAAF</name>
+      <texture1>liveries/RAAF/as350b_01.jpg</texture1>
+     <texture2>liveries/RAAF/as350b_02.jpg</texture2>
+	 <texture3>liveries/RAAF/as350b_03.jpg</texture3>
+	  <texture4>liveries/RAAF/as350b_04.jpg</texture4>
+	 <blades>liveries/RAAF/as350b_05.jpg</blades>
+ <blur>liveries/RAAF/rotorblur.png</blur>
+
+  
+      </livery>
+    </model>
+	
+	<rendering>
+    <refl_correction type="string">-0.97</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>mirrors.ac</path>
+
+<!-- ALS  mirror reflecton -->
+
+ <effect>
+    <inherits-from>Aircraft/AS350/Models/Effects/mirror/mirror</inherits-from>
+    <object-name>mirrors_0</object-name>
+	
+  </effect>
+
+
+
+</PropertyList>

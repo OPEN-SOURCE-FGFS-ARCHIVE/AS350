@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Brazilian Army, 3 EAE</name>
+      <texture1>liveries/BrazilianArmy/as350b_01.jpg</texture1>
+     <texture2>liveries/BrazilianArmy/as350b_02.jpg</texture2>
+	 <texture3>liveries/BrazilianArmy/as350b_03.jpg</texture3>
+	  <texture4>liveries/BrazilianArmy/as350b_04.jpg</texture4>
+	 <blades>liveries/BrazilianArmy/as350b_05.jpg</blades>
+ <blur>liveries/BrazilianArmy/rotorblur.png</blur>
+
+  
+
+      </livery>
+    </model>
+	
+	<rendering>
+    <refl_correction type="string">-0.9</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

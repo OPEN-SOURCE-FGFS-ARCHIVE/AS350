@@ -1,0 +1,110 @@
+<PropertyList>
+	<path>vemd.ac</path>
+	
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+      <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+
+<model>
+		<name>enginestartpage</name>
+		<path>enginestartpage.xml</path>
+
+		<offsets>
+			<x-m>0.010</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>0.084</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>initphasepage</name>
+		<path>initphase.xml</path>
+
+		<offsets>
+			<x-m>0.010</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>0.084</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>initphasepage</name>
+		<path>initphase.xml</path>
+
+		<offsets>
+			<x-m>0.009</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>-0.008</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<!--<model>
+		<name>enginepage</name>
+		<path>enginepage.xml</path>
+
+		<offsets>
+			<x-m>0.010</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>0.084</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>-->
+
+<model>
+		<name>FLIpage</name>
+		<path>FLIpage.xml</path>
+
+		<offsets>
+			<x-m>0.010</x-m>
+			<y-m>-0.044</y-m>
+			<z-m>0.083</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>vehiclepage</name>
+		<path>vehiclepage.xml</path>
+
+		<offsets>
+			<x-m>0.009</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>-0.008</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+<model>
+		<name>vehiclepage</name>
+		<path>flightreportpage.xml</path>
+
+		<offsets>
+			<x-m>0.009</x-m>
+			<y-m>-0.061</y-m>
+			<z-m>-0.008</z-m>
+		<pitch-deg>0</pitch-deg>
+
+		</offsets>
+</model>
+
+
+	
+</PropertyList>

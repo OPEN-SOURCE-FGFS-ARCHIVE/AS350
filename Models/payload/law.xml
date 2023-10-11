@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/AS350/Models/People/helipilot5/helipilot5.xml</path>
+<offsets>
+<x-m> -7.15 </x-m>
+<y-m>  0.35 </y-m>
+<z-m> -0.8 </z-m>
+</offsets>
+<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.85</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>0.85</z-offset>
+   </animation>
+  </overlay>
+</model>
+<!--
+<model>
+<name>pilot2</name>
+<path>Aircraft/ec145/Models/Divers/Pilot/sar/pilots.xml</path>
+<offsets>
+<x-m> -7.8 </x-m>
+<y-m> -0.95 </y-m>
+<z-m> -0.80 </z-m>
+</offsets>
+</model>
+-->
+
+<!-- Search Light -->
+<model>
+<path>Aircraft/AS350/Models/kit/SearchLight2/searchlight.xml</path>
+<offsets>
+<x-m> -3.8 </x-m>
+<y-m> 0</y-m>
+<z-m> -0.9 </z-m>
+</offsets>
+</model>
+
+<!-- FLIR -->
+
+<model>
+<path>Aircraft/AS350/Models/kit/flir/flir.xml</path>
+<offsets>
+<x-m> -7.75 </x-m>
+<y-m>  -0.47 </y-m>
+<z-m> -1.06 </z-m>
+</offsets>
+</model>
+
+<!-- full bench -->
+<model>
+<path>Aircraft/AS350/Models/bench1.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+<!-- front seat -->
+
+<model>
+<path>Aircraft/AS350/Models/frontseat.ac</path>
+<offsets>
+<x-m> -5.0 </x-m>
+<y-m>  0. </y-m>
+<z-m> -0.8</z-m>
+</offsets>
+</model>
+
+<!-- skid steps -->
+<model>
+<path>Aircraft/AS350/Models/skidsteps.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+<!-- wire cutters -->
+<model>
+<path>Aircraft/AS350/Models/wirecutters.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+</PropertyList>

@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+<model>
+		<name>Pylons</name>
+		<path>Aircraft/AS350/Models/payload/pylons.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+
+    <model>
+		<name>Everest_Challenge</name>
+		<path>Aircraft/AS350/Models/payload/everest.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Everest_Challenge</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Everest_Challenge</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+  <model>
+		<name>Basic Airframe</name>
+		<path>Aircraft/AS350/Models/payload/basic.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Basic Airframe</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Basic Airframe</value>
+        </equals>
+       
+    </condition>
+  </animation>
+ 
+
+  <model>
+		<name>SAR</name>
+		<path>Aircraft/AS350/Models/payload/sar.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>SAR</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>SAR</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+<model>
+		<name>Law Enforcement</name>
+		<path>Aircraft/AS350/Models/payload/law.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Law Enforcement</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Law Enforcement</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+
+ <model>
+		<name>Cargo</name>
+		<path>Aircraft/AS350/Models/payload/cargo.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Cargo</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Cargo</value>
+        </equals>
+     
+    </condition>
+  </animation>
+
+ <model>
+		<name>HeliMed</name>
+		<path>Aircraft/AS350/Models/payload/med.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>HeliMed</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>HeliMed</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C</object-name>  
+  <condition>
+  <or>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Everest_Challenge</value>
+   </equals>
+  
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Law Enforcement</value>
+   </equals>
+  
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>SAR</value>
+   </equals>
+  
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Basic Airframe</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Cargo</value>
+   </equals>
+   
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>HeliMed</value>
+   </equals>
+   
+  </or>
+  </condition>
+ </animation>
+ 
+ <model>
+		<name>Floatation_System</name>
+		<path>Aircraft/AS350/Models/kit/Floats/Floats.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Floatation_System</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[2]</property>
+          <value>Floatation_System</value>
+        </equals>
+       
+    </condition>
+  </animation>
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C1</object-name>  
+  <condition>
+ 
+   <equals>
+    <property>sim/multiplay/generic/string[2]</property>
+    <value>Floatation_System</value>
+   </equals>
+  
+  
+  </condition>
+ </animation>
+
+
+</PropertyList>

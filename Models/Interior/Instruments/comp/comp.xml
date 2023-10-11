@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>comp.ac</path>
+ 
+ 
+
+ <animation>
+  <type>material</type>
+  <object-name>Ring</object-name>
+ <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Ring</object-name>
+  <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

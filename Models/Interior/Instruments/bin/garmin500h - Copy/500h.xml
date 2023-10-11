@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ 
+<path>500h.ac</path>
+
+<!-- right screen -->
+
+ <model>
+    <path>Aircraft/AS350/Models/Interior/Instruments/garmin500h/MFD/MFD3d.xml</path>
+   
+
+  </model>
+
+ <!-- range knob -->
+  <animation>
+        <type>pick</type>
+        <object-name>rightknob</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>bo105.set_range(1);</script>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>bo105.set_range(-1);</script>
+            </binding>
+        </action>
+        <action>
+            <button>3</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>bo105.set_range(1);</script>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>bo105.set_range(-1);</script>
+            </binding>
+        </action>
+    </animation>	
+		
+<!-- left screen -->
+
+ <model>
+    <path>Aircraft/AS350/Models/Interior/Instruments/garmin500h/PFD/PFD3d.xml</path>
+    <offsets>
+      <x-m>0.00</x-m>
+      <y-m>-0.19</y-m>
+      <z-m></z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.00 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.0</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.05</z-offset>
+   </animation>
+  </overlay>
+  </model>	
+  
+  <animation>
+    <type>material</type>
+    <object-name>heading</object-name>
+   <object-name>crs</object-name>
+   <object-name>alt</object-name>
+   <object-name>vs</object-name>
+    <object-name>baro</object-name>
+   <object-name>1</object-name>
+   <object-name>2</object-name>
+   <object-name>3</object-name>
+   <object-name>4</object-name>
+   <object-name>5</object-name>
+   <object-name>6</object-name>
+   <object-name>7</object-name>
+    <object-name>8</object-name>
+   <object-name>9</object-name>
+   <object-name>10</object-name>
+   <object-name>rangeup</object-name>
+     <object-name>rangedon</object-name>
+   <object-name>menu</object-name>
+    <object-name>clr</object-name>
+   <object-name>ent</object-name>
+  
+   <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+   
+  </animation>
+  
+  <!-- buttons -->
+  
+  <!-- Arport on/off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>6</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				<property>instrumentation/nd/display/arpt</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+	
+	
+	<!-- fix On/Off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>7</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/nd/display/fix</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+	
+	
+	<!-- tcas On/Off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>rangedon</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/nd/display/tcas</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+	
+	<!-- vor On/Off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>8</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/nd/display/vor</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+	
+	
+		<!-- mfd range 
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>9</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/nd/display/vor</property>
+			 
+			</binding>
+		</action>
+	</animation>	-->
+	
+	
+	<!-- map On/Off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>9</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/primus2000/dc840/mfd-map</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+	
+	<!-- wx On/Off -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>ent</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/primus2000/dc840/mfd-wx</property>
+			 
+			</binding>
+						<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/primus2000/dc840/wx</property>
+			 
+			</binding>
+		</action>
+	</animation>
+	
+		<!-- tacs -->
+ <animation>
+		<type>pick</type>
+		 <visible>true</visible>
+		<object-name>rangeup</object-name>
+		
+		<action>
+			<button>0</button>
+			  <repeatable>true</repeatable>
+			<binding>
+				 <command>property-toggle</command>
+				 <property>instrumentation/primus2000/dc840/tcas</property>
+			 
+			</binding>
+		</action>
+	</animation>	
+
+</PropertyList>

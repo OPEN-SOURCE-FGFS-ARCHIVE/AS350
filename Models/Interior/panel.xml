@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>150</max-m>
+    </animation>
+
+ <!--sticks  n pedals -->
+
+ <model>
+ <name>cyclic</name>
+		<path>Aircraft/AS350/Models/cyclic.xml</path>
+		<offsets>
+			  <x-m> -4.57</x-m>
+     <y-m>  0.3 </y-m>
+      <z-m>  -0.79 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+	 <model>
+ <name>collective</name>
+		<path>Aircraft/AS350/Models/collective.xml</path>
+		<offsets>
+			  <x-m> -4.12</x-m>
+     <y-m>  0.075 </y-m>
+      <z-m>  -0.78 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+	 <model>
+ <name>pedals</name>
+		<path>Aircraft/AS350/Models/pedals.xml</path>
+		<offsets>
+			  <x-m> -4.97</x-m>
+     <y-m>  0.3 </y-m>
+      <z-m>  -0.81 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+	<!-- Float system  bits -->
+
+	<model>
+ <name>Float_trigger</name>
+		<path>Aircraft/AS350/Models/kit/Floats/Float-switch/FloatToggle.xml</path>
+		<offsets>
+			  <x-m> -4.62</x-m>
+     <y-m>  0.1 </y-m>
+      <z-m>  -0.4 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+		<animation>
+		<type>select</type>
+
+		<object-name>Float_trigger</object-name>
+			<condition>
+
+		<equals>
+    <property>sim/multiplay/generic/string[2]</property>
+    <value>Floatation_System</value>
+	</equals>
+
+	</condition>
+	</animation>
+
+
+
+  <!-- Main panel -->
+
+  <model>
+  <name>panel</name>
+		<path>Aircraft/AS350/Models/Interior/dash.xml</path>
+		<offsets>
+			  <x-m>0</x-m>
+     <y-m>0</y-m>
+      <z-m>0 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+
+  <!-- panel vibration experiment -->
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+   <condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.05</value>
+				</greater-than>
+			</condition>
+    <factor>100</factor>
+    <axis>
+      <x> 1 </x>
+      <y> -1 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/longitudinal</property>
+    <factor>0.0015</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/lateral</property>
+    <factor>0.0025</factor>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+
+
+<!-- centre console -->
+
+
+
+
+	 <model>
+		<name>SCU</name>
+		<path>Aircraft/AS350/Models/Interior/Instruments/SCU/scu.xml</path>
+		<offsets>
+			  <x-m> -4.544</x-m>
+     <y-m>  -0.013 </y-m>
+      <z-m>  -0.522 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   31 </pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.01</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+
+
+
+
+<model>
+
+		<path>Aircraft/AS350/Models/Interior/Instruments/comp/comp.xml</path>
+		<offsets>
+			<x-m>-4.565</x-m>
+      <y-m>0</y-m>
+      <z-m>0.224</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+
+
+
+	 <!-- woolthread -->
+  <model>
+    <name>woolthread</name>
+    <path>Aircraft/AS350/Models/Interior/Instruments/woolthread/woolthread.xml</path>
+    <offsets>
+      <x-m>-5.0</x-m>
+      <y-m>0</y-m>
+      <z-m>0.0</z-m>
+      <pitch-deg>-10</pitch-deg>
+    </offsets>
+  </model>
+
+
+<model>
+
+		<path>Aircraft/AS350/Models/Interior/Instruments/kma20/kma20.xml</path>
+		<offsets>
+		  <x-m> -4.732</x-m>
+     <y-m>  -0.015 </y-m>
+      <z-m>  -0.375 </z-m>
+	   <pitch-deg>   -18.5 </pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.95</y-offset>
+    <z-offset>1.3</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+ <model>
+
+		<path>Aircraft/AS350/Models/Interior/Instruments/kx165/kx165-1.xml</path>
+		<offsets>
+		  <x-m> -4.68</x-m>
+     <y-m>  -0.003 </y-m>
+      <z-m>  -0.429 </z-m>
+	   <pitch-deg>   -61 </pitch-deg>
+		</offsets>
+
+	</model>
+
+
+	<model>
+
+		<path>Aircraft/AS350/Models/Interior/Instruments/kx165/kx165-2.xml</path>
+		<offsets>
+
+			 <x-m> -4.635</x-m>
+     <y-m>  -0.003 </y-m>
+      <z-m>  -0.453 </z-m>
+	   <pitch-deg>   -60 </pitch-deg>
+		</offsets>
+
+	</model>
+
+
+
+</PropertyList>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+ <path>winch.ac</path>
+ 
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>100</max-m>
+ </animation>
+ 
+  <model>
+            <name>Rescue-Op</name>
+            <path>Aircraft/AS350/Models/kit/Rescue/Rescue-Op.xml</path>
+            <offsets>
+                    <x-m>-0.72</x-m>
+                    <y-m>-0.3</y-m>
+                    <z-m>-5.97</z-m>
+            </offsets>
+        </model>
+ 
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>winch1</object-name>
+ <object-name>winch2</object-name>
+  <object-name>Rescue-Op</object-name>
+  <property>sim/model/bo105/doors/door[3]/position-norm</property>
+  
+  <factor>50</factor>
+  <axis>
+   <x1-m>0</x1-m>
+   <y1-m>0</y1-m>
+   <z1-m>0</z1-m>
+   <x2-m>0</x2-m>
+   <y2-m></y2-m>
+   <z2-m>0.09</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+		<type>select</type>
+		<object-name>Rescue-Op</object-name>
+		<condition>
+			
+				
+			   <equals>
+                 <property>sim/model/bo105/doors/door[3]/position-norm</property>
+	            <value>1</value>
+	            </equals>
+			
+		</condition>
+        </animation>
+	
+	
+</PropertyList>
+
+
+

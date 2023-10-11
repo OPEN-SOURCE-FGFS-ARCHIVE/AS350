@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>engineswitch.ac</path>
+ 
+ 
+ 
+
+  <animation>
+    <type>pick</type>
+    <object-name>switchguard</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+           <property>controls/engines/engine/switchguard</property>
+        </condition>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/switchguard</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>switchguard</tooltip-id>
+<!--
+        <label>guard/unlock</label>
+-->
+        <label>%s</label>
+        <property>controls/engines/engine/switchguard</property>
+        <mapping>nasal</mapping>
+        <script>
+          var mode = ['guard', 'unlock'];
+          return mode[arg[0]];
+        </script>
+      </binding>
+    </hovered>
+  </animation>
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>startselector</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+ 		  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/ignition</property>
+      </binding>
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+	    <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/ignition</property>
+      </binding>
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>startselector</tooltip-id>
+<!--
+        <label>engine starter</label>
+-->
+        <label>%s</label>
+        <property>controls/engines/engine/startselector</property>
+        <mapping>nasal</mapping>
+        <script>
+          var mode = ['start Engine', 'switch OFF Engine'];
+          return mode[arg[0]];
+        </script>
+      </binding>
+    </hovered>
+  </animation>
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>switchguard</object-name>
+   
+    <property>controls/engines/engine/switchguard</property>
+	<value>true</value>
+    <factor>105</factor>
+    <offset-deg>-105</offset-deg>
+    <center>
+      <x-m>0.014</x-m>
+      <y-m>0.041</y-m>
+      <z-m>0.032</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>startselector</object-name>
+    <property>controls/engines/engine/ignition</property>
+    <factor>60</factor>
+    <offset-deg>-10</offset-deg>
+    <center>
+      <x-m>0.009</x-m>
+      <y-m>0.059</y-m>
+      <z-m>0.001</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+    
+ 
+
+ 
+  
+
+ 
+
+
+</PropertyList>
