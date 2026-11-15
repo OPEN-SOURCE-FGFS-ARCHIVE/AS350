@@ -1,4 +1,4 @@
-# Open Source FLightGear Archive: AS350
+# Open Source FlightGear Archive: AS350
 
 > **Archival Date:** 15.11.2026
 
