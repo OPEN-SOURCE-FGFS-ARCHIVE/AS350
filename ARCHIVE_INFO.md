@@ -1,6 +1,7 @@
 # Open Source FLightGear Archive: AS350
 
-> **Archival Date:** 15.11.2026  
+> **Archival Date:** 15.11.2026
+
 > **Source Origin:** Recovered from https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar/rotary-wing/eurocopter-as350-ecureuil-squirrel
 
 ---
@@ -10,6 +11,7 @@
 This repository is part of the **Open-Source FGFS Archive**, dedicated to preserving FlightGear aircraft add-ons, materials, assets, ensuring genuine adherence to open-source software principles, and maintaining proper version control history (DVCS) where centralized or restricted distribution attempts to obscure it.
 
 Open Source FlightGear Archive is run by SP-NTX, sp.ntx.flightgear@gmail.com
+
 Available at https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/
 
 ### Licensing & Compliance
