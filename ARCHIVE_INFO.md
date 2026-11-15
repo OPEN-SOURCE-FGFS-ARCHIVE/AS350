@@ -20,4 +20,4 @@ Available at https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/
 * **Attribution:** All original authors, 3D modelers, FDM developers, and system contributors retain full credit. This repository does not strip author names, hide commit histories, or obscure provenance.
 
 ### Notice to Upstream Maintainers
-If code or assets originating from GPL-licensed projects are utilized, the terms of the GPL must be respected globally—not selectively.
+If code or assets originating from GPL-licensed projects are utilized, the terms of the GPL must be respected globally, not selectively.
