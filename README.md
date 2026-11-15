@@ -2,13 +2,7 @@
 
 Airbus Helicopters AS350 for FlightGear
 
-# Open Source FlightGear Archive: AS350
 
-> **Archival Date:** 15.11.2026
-
-> **Source Origin:** Recovered from https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar/rotary-wing/eurocopter-as350-ecureuil-squirrel
-
----
 # Open Source FlightGear Archive: AS350
 
 > **Archival Date:** 15.11.2026
